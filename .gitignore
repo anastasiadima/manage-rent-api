@@ -1,0 +1,7 @@
+*.obj
+.vs
+*.bin
+ManageRentApi/bin/Debug/
+ManageRentApi/obj/
+ManageRentApiUnitTest/obj/
+ManageRentApiUnitTest/bin/
