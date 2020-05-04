@@ -12,5 +12,7 @@ namespace ManageRentApi.Helpers
           public DbSet<Tenant> Tenants { get; set; }
           public DbSet<Plan> Plans { get; set; }
           public DbSet<TenantPlan> TenantPlan { get; set; }
+          public DbSet<OwnerTenant> OwnerTenants { get; set; }
+          public DbSet<Invitation> Invitations { get; set; }
      }
 }
