@@ -40,6 +40,42 @@ namespace ManageRentApi.Migrations
                     b.ToTable("Houses");
                 });
 
+            modelBuilder.Entity("ManageRentApi.Models.Invitation", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("ReceiverEmail");
+
+                    b.Property<string>("SenderEmail");
+
+                    b.Property<int>("SenderId");
+
+                    b.Property<string>("Status");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Invitations");
+                });
+
+            modelBuilder.Entity("ManageRentApi.Models.OwnerTenant", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("OwnerId");
+
+                    b.Property<string>("Status");
+
+                    b.Property<int>("TenantId");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("OwnerTenants");
+                });
+
             modelBuilder.Entity("ManageRentApi.Models.Plan", b =>
                 {
                     b.Property<int>("Id")
